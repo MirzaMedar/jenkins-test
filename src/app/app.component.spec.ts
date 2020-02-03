@@ -1,11 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { TestComponent } from './test/test.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        TestComponent
       ],
     }).compileComponents();
   }));
@@ -19,7 +21,7 @@ describe('AppComponent', () => {
   it(`should have as title 'jenkins-test'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).not.toEqual('jenkins-test');
+    expect(app.title).toEqual('jenkins-test');
   });
 
   it('should render title in a h1 tag', () => {
