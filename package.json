@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "tc-test": "ng test --watch=false --reporters=teamcity"
+    "tc-test": "ng test --reporters=teamcity"
   },
   "private": true,
   "dependencies": {
