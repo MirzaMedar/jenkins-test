@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "tc-test": "ng test --reporters=teamcity"
+    "teamcitytest": "karma start --reporters teamcity --single-run --browsers PhantomJS --colors false"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
+    "karma-html-reporter": "^0.2.7",
     "karma-typescript-preprocessor": "^0.4.0",
     "puppeteer": "^2.1.0",
     "rxjs": "~6.3.3",

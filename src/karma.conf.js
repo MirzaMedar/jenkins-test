@@ -8,13 +8,14 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
-      require('karma-teamcity-reporter'),
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
-      require('karma-coverage-istanbul-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma'),
-      require("karma-typescript-preprocessor")
+      'karma-teamcity-reporter',
+      'karma-jasmine',
+      'karma-chrome-launcher',
+      'karma-jasmine-html-reporter',
+      'karma-coverage-istanbul-reporter',
+      '@angular-devkit/build-angular/plugins/karma',
+      "karma-typescript-preprocessor",
+      'karma-html-reporter'
     ],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
@@ -24,7 +25,7 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'karma-teamcity-reporter'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
